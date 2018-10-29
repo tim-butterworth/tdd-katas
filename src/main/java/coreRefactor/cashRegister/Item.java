@@ -1,13 +1,9 @@
 package coreRefactor.cashRegister;
 
-public class Item {
-    private final String itemType;
-
-    public Item(String itemType) {
-        this.itemType = itemType;
-    }
-
-    public String getItemType() {
-        return itemType;
-    }
+public enum Item {
+    MILK,
+    WATER,
+    GREEN_BEANS,
+    FANCY_WATER,
+    FANCY_WATER_COUPON
 }
