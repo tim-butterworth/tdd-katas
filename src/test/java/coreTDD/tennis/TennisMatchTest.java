@@ -10,6 +10,6 @@ public class TennisMatchTest {
     public void a_game_should_begin_love_love() {
         TennisMatch tennisMatch = new TennisMatch();
 
-        assertThat(tennisMatch.getScore()).isEqualTo("Love-Love");
+        assertThat(tennisMatch.getScore()).isEqualTo("Love-all");
     }
 }
