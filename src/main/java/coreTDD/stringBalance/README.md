@@ -9,7 +9,9 @@ There are opening symbols and corresponding closing symbols.  Every open symbol 
 `<  >`
 `(  )`
 
-There is one more rule, opening and closing symbols can be nested but they can't interweave, for example this is valid:
+There are two more rules:
+
+Opening and closing symbols can be nested but they can't interweave, for example this is valid:
 
 `([{}])`
 
@@ -19,7 +21,15 @@ but this is not valid:
 
 because the square brace opens inside the curly braces but closes outside the curly braces.
 
-Here are some examples of balanced strings:
+Opening symbols must come before closing symbols, for example this is valid:
+
+`()`
+
+but this is not valid:
+
+`)(`
+
+### Here are some examples of balanced strings:
 
 `` (empty string)
 `hi there` (no opening or closing symbols)
@@ -28,8 +38,9 @@ Here are some examples of balanced strings:
 `<{[()]}>`
 `[][]`
 `[]{}<>()`
+`(some {text})`
 
-Here are some examples of invalid strings:
+### Here are some examples of unbalanced strings:
 
 `[`
 `]`
@@ -37,3 +48,4 @@ Here are some examples of invalid strings:
 `(()`
 `[(])`
 `{}[(])`
+`)(`
