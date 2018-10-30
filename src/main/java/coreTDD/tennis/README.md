@@ -6,11 +6,13 @@ From the perspective of score, a player wins if they have at least 4 points and 
 
 The scores and game states have special names:
 
+```
 0 -> "Love"
 1 -> "15"
 2 -> "30"
 3 -> "40"
 4 -> "Game"
+```
 
 For a game, one player is the server the whole time and the other player is the receiver
 
