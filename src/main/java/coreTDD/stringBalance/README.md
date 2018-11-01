@@ -1,35 +1,29 @@
 ## String Balancing
 
-Some strings are balanced and some are not.  The rules for a balanced string are as follows:
+### Rules
 
-There are opening symbols and corresponding closing symbols.  Every open symbol must have a matching closing symbol. These are the opening symbols and corresponding closing symbols:
+There are pairs of symbols, an opening symbol and a closing symbol.
+
+For a string to be balanced the following rules must be followed:
+
+ - Every opening symbol must have a matching closing symbol
+ - The closing symbol for a pair must come after the opening symbol (valid -> `()`, invalid `)(`)
+ - Two different types of opening and closing symbols can not interleave but they can be nested (valid -> `([])`, invalid -> `([)]`)
+
+### Steps to implement this kata
+
+1 First implement functionality to support only parenthesis `()`
+1 Next implement functionality to support parenthesis and square braces `()` and `[]`
+1 Finally generalize the implementation to support all 4 symbol pairs:
 
 `[  ]`
 `{  }`
 `<  >`
 `(  )`
 
-There are two more rules:
+### Examples
 
-Opening and closing symbols can be nested but they can't interweave, for example this is valid:
-
-`([{}])`
-
-but this is not valid:
-
-`{[}]`
-
-because the square brace opens inside the curly braces but closes outside the curly braces.
-
-Opening symbols must come before closing symbols, for example this is valid:
-
-`()`
-
-but this is not valid:
-
-`)(`
-
-### Here are some examples of balanced strings:
+#### Balanced strings
 
 `` (empty string)
 `hi there` (no opening or closing symbols)
@@ -40,7 +34,7 @@ but this is not valid:
 `[]{}<>()`
 `(some {text})`
 
-### Here are some examples of unbalanced strings:
+#### Unbalanced strings
 
 `[`
 `]`
