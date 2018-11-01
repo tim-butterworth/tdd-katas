@@ -12,9 +12,9 @@ For a string to be balanced the following rules must be followed:
 
 ### Steps to implement this kata
 
-1 First implement functionality to support only parenthesis `()`
-1 Next implement functionality to support parenthesis and square braces `()` and `[]`
-1 Finally generalize the implementation to support all 4 symbol pairs:
+1. First implement functionality to support only parenthesis `()`
+1. Next implement functionality to support parenthesis and square braces `()` and `[]`
+1. Finally generalize the implementation to support all 4 symbol pairs:
 
 `[  ]`
 `{  }`
