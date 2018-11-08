@@ -2,7 +2,7 @@ const path = require("path");
 const { jasmineCommandLinePlugin } = require("./custom-plugins/jasmineCustomPlugin");
 
 module.exports = {
-    entry: "./src/tick-tack-toe/tick-tack-toe.spec.ts",
+    entry: "./src/plink-plonk-plunk/plink-plonk-plunk.spec.ts",
     devtool: "inline-source-map",
     mode: "development",
     node: {
