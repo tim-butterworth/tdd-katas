@@ -1,21 +1,24 @@
 {
     "defaultSeverity": "error",
     "extends": [
-        "tslint:recommended"
+	"tslint:recommended"
     ],
     "jsRules": {},
     "rules": {
 	"interface-name": false,
-	"typedef": [
-	    true,
-	    "call-signature",
-	    "parameter",
-	    "property-declaration",
-	    "variable-declaration",
-	    "member-variable-declaration",
-	    "object-destructuring",
-	    "array-destructuring"
-	],
+	//    "typedef": [
+	//      true,
+	//      "call-signature",
+	//      "parameter",
+	//      "property-declaration",
+	//      "variable-declaration",
+	//      "member-variable-declaration",
+	//      "object-destructuring",
+	//      "array-destructuring"
+	//    ],
+	"interface-over-type-literal": false,
+	"max-classes-per-file": false,
+	"no-console": false,
 	"ordered-imports": false,
 	"trailing-comma": false,
 	"object-literal-sort-keys": false
