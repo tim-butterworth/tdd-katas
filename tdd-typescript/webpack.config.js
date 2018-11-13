@@ -16,6 +16,9 @@ const tickTackToeConfig = withTests({
 const plinkPlonkPlunkConfig = withTests({
     entry: "./src/plink-plonk-plunk/plink-plonk-plunk.spec.ts"
 });
+const toDoConfig = withTests({
+    entry: "./src/to-do/to-do.spec.ts"
+});
 const conceptsConfig = {
     entry: {
         "const-let": "./src/core-concepts/const-let.ts",
@@ -67,6 +70,7 @@ const configSelectionMap = {
     concepts: conceptsConfig,
     tickTackToe: tickTackToeConfig,
     plinkPlonkPlunk: plinkPlonkPlunkConfig,
+    toDo: toDoConfig,
 }
 const selectedConfig = configSelectionMap[tsSelection];
 
