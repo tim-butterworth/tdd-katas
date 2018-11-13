@@ -1,7 +1,22 @@
 const path = require("path");
 const {jasmineCommandLinePlugin} = require("./custom-plugins/jasmineCustomPlugin");
 
-module.exports = {
+const tsSelection = process.env.TS_SELECTION || "concepts";
+
+const withTests = (config) => Object.assign({}, config, {
+    output: {
+        filename: "bundle.spec.js",
+        path: path.resolve(__dirname, "dist")
+    },
+    plugins: [jasmineCommandLinePlugin]    
+});
+const tickTackToeConfig = withTests({
+    entry: "./src/tick-tack-toe/tick-tack-toe.spec.ts"
+});
+const plinkPlonkPlunkConfig = withTests({
+    entry: "./src/plink-plonk-plunk/plink-plonk-plunk.spec.ts"
+});
+const conceptsConfig = {
     entry: {
         "const-let": "./src/core-concepts/const-let.ts",
         "object-literals": "./src/core-concepts/object-literals.ts",
@@ -11,6 +26,14 @@ module.exports = {
         "classes": "./src/core-concepts/classes.ts",
         "functions-arrow-functions": "./src/core-concepts/functions-arrow-functions.ts",
     },
+    output: {
+        filename: "[name]-bundle.js",
+        path: path.resolve(__dirname, "dist")
+    },
+    plugins: [],
+};
+
+const coreConfig = {
     devtool: "inline-source-map",
     mode: "development",
     node: {
@@ -38,9 +61,18 @@ module.exports = {
     resolve: {
         extensions: [".ts", ".js"]
     },
-    output: {
-        filename: "[name]-bundle.js",
-        path: path.resolve(__dirname, "dist")
-    },
-    plugins: [jasmineCommandLinePlugin]
 };
+
+const configSelectionMap = {
+    concepts: conceptsConfig,
+    tickTackToe: tickTackToeConfig,
+    plinkPlonkPlunk: plinkPlonkPlunkConfig,
+}
+const selectedConfig = configSelectionMap[tsSelection];
+
+if (!selectedConfig) {
+    console.log("Please select one of the valid options for TS_SELECTION: ", Object.keys(configSelectionMap));
+    process.exit(1);
+}
+
+module.exports = Object.assign({}, coreConfig, selectedConfig);
