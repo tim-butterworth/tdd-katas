@@ -45,6 +45,7 @@ class ToDoList {
 export {
     ToDoList,
     ToDo,
+    ToDoID,
     ToDoItemStatus,
     CompletionResponse,
     MoveResponse,

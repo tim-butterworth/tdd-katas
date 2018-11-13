@@ -1,6 +1,11 @@
 import {
     ToDoList,
     ToDo,
+    ToDoID,
+    ToDoItemStatus,
+    CompletionResponse,
+    MoveResponse,
+    RemoveResponse
 } from "./to-do";
 
 describe("ToDoList", () => {
