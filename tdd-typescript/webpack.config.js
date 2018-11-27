@@ -19,6 +19,12 @@ const plinkPlonkPlunkConfig = withTests({
 const toDoConfig = withTests({
     entry: "./src/to-do/to-do.spec.ts"
 });
+const toDoStatelessConfig = withTests({
+    entry: "./src/to-do-stateless/to-do-stateless.spec.ts"
+});
+const sortConfig = withTests({
+    entry: "./src/sort/sort-machine.spec.ts"
+});
 const conceptsConfig = {
     entry: {
         "const-let": "./src/core-concepts/const-let.ts",
@@ -71,6 +77,8 @@ const configSelectionMap = {
     tickTackToe: tickTackToeConfig,
     plinkPlonkPlunk: plinkPlonkPlunkConfig,
     toDo: toDoConfig,
+    toDoStateless: toDoStatelessConfig,
+    sort: sortConfig,
 }
 const selectedConfig = configSelectionMap[tsSelection];
 
