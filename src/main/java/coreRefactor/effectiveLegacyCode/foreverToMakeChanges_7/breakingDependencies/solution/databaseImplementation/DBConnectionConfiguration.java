@@ -1,0 +1,4 @@
+package coreRefactor.effectiveLegacyCode.foreverToMakeChanges_7.breakingDependencies.solution.databaseImplementation;
+
+public class DBConnectionConfiguration {
+}
