@@ -42,10 +42,12 @@ start vanilla angular app
 ]
 
 1. make a component named BasicChild that displays a static string
-1. update the component with a button that toggles the case of the string (angular template syntax, interpolation)
-1. update the component with a button that makes a string appear on click (ngif)
-1. update the component with a button that updates a click counter, display the click counter (field in a component, component method)
-1. display a list of strings (ngfor)
+1. update the component to display a string set in the component field (interpolation)
+1. update the component with a `toggle case` button that toggles the case of the string (angular template syntax)
+1. update the component with a `show` button that makes the string and `toggle case` button on click (ngif)
+1. (OPTIONAL) hide the `show` button after it is clicked
+1. update the component with a `count` button that updates a click counter, display the click counter (field in a component, component method)
+1. display a list of strings from a field on the component (ngfor)
 1. update the component with a button and a text input when the button is clicked, add the input value to the list of strings (display the list) 
 
 [
