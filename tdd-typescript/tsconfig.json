@@ -6,6 +6,7 @@
 	"target": "es6",
 	"sourceMap": true,
 	"alwaysStrict": true,
-	"strict": true
+	"strict": true,
+	"moduleResolution": "node"
     }
 }

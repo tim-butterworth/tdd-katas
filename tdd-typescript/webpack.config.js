@@ -1,5 +1,7 @@
 const path = require("path");
-const {jasmineCommandLinePlugin} = require("./custom-plugins/jasmineCustomPlugin");
+const {
+    jasmineCommandLinePlugin
+} = require("./custom-plugins/jasmineCustomPlugin");
 
 const tsSelection = process.env.TS_SELECTION || "concepts";
 
@@ -27,13 +29,23 @@ const sortConfig = withTests({
 });
 const conceptsConfig = {
     entry: {
-        "const-let": "./src/core-concepts/const-let.ts",
-        "object-literals": "./src/core-concepts/object-literals.ts",
-        "destructuring": "./src/core-concepts/destructuring.ts",
-        "spread-operator": "./src/core-concepts/spread-operator.ts",
-        "types-and-interfaces": "./src/core-concepts/types-and-interfaces.ts",
-        "classes": "./src/core-concepts/classes.ts",
-        "functions-arrow-functions": "./src/core-concepts/functions-arrow-functions.ts",
+        "const-let": "./src/core-concepts/typescript/const-let.ts",
+        "object-literals": "./src/core-concepts/typescript/object-literals.ts",
+        "destructuring": "./src/core-concepts/typescript/destructuring.ts",
+        "spread-operator": "./src/core-concepts/typescript/spread-operator.ts",
+        "types-and-interfaces": "./src/core-concepts/typescript/types-and-interfaces.ts",
+        "classes": "./src/core-concepts/typescript/classes.ts",
+        "functions-arrow-functions": "./src/core-concepts/typescript/functions-arrow-functions.ts",
+    },
+    output: {
+        filename: "[name]-bundle.js",
+        path: path.resolve(__dirname, "dist")
+    },
+    plugins: [],
+};
+const observableConfig = {
+    entry: {
+        "create": "./src/core-concepts/observables/create.ts",
     },
     output: {
         filename: "[name]-bundle.js",
@@ -61,7 +73,9 @@ const coreConfig = {
                 use: [
                     {
                         loader: 'tslint-loader',
-                        options: {configFile: 'tslint.json'}
+                        options: {
+			    configFile: 'tslint.json'
+			}
                     }
                 ]
             }
@@ -74,6 +88,7 @@ const coreConfig = {
 
 const configSelectionMap = {
     concepts: conceptsConfig,
+    observables: observableConfig,
     tickTackToe: tickTackToeConfig,
     plinkPlonkPlunk: plinkPlonkPlunkConfig,
     toDo: toDoConfig,
