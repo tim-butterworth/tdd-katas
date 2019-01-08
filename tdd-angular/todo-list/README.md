@@ -87,4 +87,4 @@ When a todo is selected and a user selects a different todo
 Then the originally selected todo should no longer be selected
 
 `Notes`
-Selected todos should be unselectable
+A selected todo should be unselectable when a different todo is selected
