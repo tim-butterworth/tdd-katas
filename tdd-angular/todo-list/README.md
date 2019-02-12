@@ -18,6 +18,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Running express server
+
+Run `npm run start:server` to start the express server found in `server/server.js`
+
 # Stories
 
 ---
@@ -88,3 +92,13 @@ Then the originally selected todo should no longer be selected
 
 `Notes`
 A selected todo should be unselectable when a different todo is selected
+
+--
+## Load todos from a server
+
+Using the express server, load a static set of initial todos.
+
+--
+## Save todos to the server
+
+Using the express server, save updates and changes to the list of todos.
