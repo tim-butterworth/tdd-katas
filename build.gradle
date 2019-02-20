@@ -7,7 +7,6 @@ buildscript {
     }
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
-        classpath("net.ltgt.gradle:gradle-apt-plugin:0.20")
     }
 }
 
@@ -16,7 +15,6 @@ plugins {
 }
 
 apply plugin: 'kotlin'
-apply plugin: 'net.ltgt.apt-idea'
 
 group 'code.katas'
 version '1.0-SNAPSHOT'
@@ -30,11 +28,6 @@ repositories {
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     compile("org.jetbrains.kotlin:kotlin-reflect")
-
-    annotationProcessor("org.immutables:value:2.7.4")
-    compileOnly("org.immutables:value:2.7.4")
-    compile("org.immutables:value:2.7.4:annotations")
-    compile("org.immutables:gson:2.7.4:annotations")
 
     testCompile('junit:junit:4.12')
     testCompile('org.assertj:assertj-core:3.11.1')
