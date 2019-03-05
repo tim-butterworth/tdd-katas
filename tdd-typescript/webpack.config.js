@@ -27,6 +27,9 @@ const toDoStatelessConfig = withTests({
 const sortConfig = withTests({
     entry: "./src/sort/sort-machine.spec.ts"
 });
+const lightAndSwitchConfig = withTests({
+    entry: "./src/light-and-switch/light-and-switch.spec.ts"
+});
 const conceptsConfig = {
     entry: {
         "const-let": "./src/core-concepts/typescript/const-let.ts",
@@ -94,6 +97,7 @@ const configSelectionMap = {
     toDo: toDoConfig,
     toDoStateless: toDoStatelessConfig,
     sort: sortConfig,
+    lightAndSwitch: lightAndSwitchConfig
 }
 const selectedConfig = configSelectionMap[tsSelection];
 
